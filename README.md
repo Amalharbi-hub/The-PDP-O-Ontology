@@ -1,1 +1,2 @@
 # The-PDP-O-Ontology
+PDP-O (Plant Diseases and Pests Ontology) is a domain-specific ontology designed to semantically represent knowledge related to plant diseases, pests, their symptoms, causal agents, environmental conditions, and treatment strategies. Developed using OWL 2 DL and compatible with reasoning engines, PDP-O enables intelligent diagnosis, knowledge sharing, and decision support in the agricultural domain.
