@@ -1,0 +1,121 @@
+ID,Draft CQ (natural language),Original use case,Category (tentative)
+D1,What disease causes ejection of chewed fibers from trunk?,Farmer sees fibers and yellow leaves,Disease/Pest
+D2,What causes cylindrical holes on trunk and leaf base?,Farmer finds holes and sticky material,Disease/Pest
+D3,Which disease produces a dark brown stripe on leaf rachis?,Farmer observes stripe from base to top,Disease/Pest
+D4,What causes brown or rusty spots on unopened inflorescence?,Farmer reports spots and white powder,Disease/Pest
+D5,What causes white powdery covering on inflorescence?,Farmer sees white powder on inflorescence,Disease/Pest
+D6,What disease leads to longitudinal tunnels and holes on fruit bunch?,Farmer finds tunnels and silver spikelet tips,Disease/Pest
+D7,What causes spikelet tips to become light gray to silver?,Farmer observes silver tips on spikelets,Disease/Pest
+D8,What causes holes on unopened spathe?,Farmer finds holes on spathe before opening,Disease/Pest
+D9,What makes leaflet become light green or yellowish green?,Farmer reports discoloured leaflets,Disease/Pest
+D10,What causes oozing of honeydew on leaflet?,Farmer sees sticky honeydew on leaves,Disease/Pest
+D11,What disease causes yellowish-brown stripe on leaf base and rachis?,Farmer sees stripe and leaf base rot,Disease/Pest
+D12,What causes leaf base rot?,Farmer finds rotting at leaf base,Disease/Pest
+D13,What causes death of offshoot?,Farmer reports offshoot death,Disease/Pest
+D14,What disease causes deformation of leaves?,Farmer sees twisted leaves,Disease/Pest
+D15,What causes brown spots with light center and dark edge on leaflet?,Farmer observes spot with yellow halo,Disease/Pest
+D16,What disease causes pale spots surrounded by brown ring on leaflet?,Farmer reports pale ring spot,Disease/Pest
+D17,What causes circular scorched shot holes on leaf edge?,Farmer finds shot holes on leaf,Disease/Pest
+D18,What causes sticky material at entrance holes on leaf rachis?,Farmer sees sticky residue at holes,Disease/Pest
+D19,What causes tunnels at leaf rachis?,Farmer finds tunnels inside leaf rachis,Disease/Pest
+D20,What makes leaf become powdery?,Farmer observes powdery leaf surface,Disease/Pest
+D21,What disease causes death of leaflet from tip backwards?,Farmer sees tip dieback,Disease/Pest
+D22,What causes malformation and twisting of leaf?,Farmer reports twisted leaves,Disease/Pest
+D23,What causes leaf to have scorched or charcoal-like appearance?,Farmer sees burnt look on leaves,Disease/Pest
+D24,What disease causes subepidermal spots on both sides of leaflet and rachis?,Farmer spots under‑skin lesions,Disease/Pest
+D25,What causes yellow pustules that turn black on lower old leaf?,Farmer sees pustules turn black,Disease/Pest
+D26,What causes drying of leaf?,Farmer reports leaf drying out,Disease/Pest
+D27,What causes leaflet tip and edges to become burnt grey?,Farmer sees grey burnt tips,Disease/Pest
+D28,What causes small yellow or brown circular spots on leaflet and rachis?,Farmer finds small spots,Disease/Pest
+D29,What causes small holes like shotgun bullets on trunk and leaf base?,Farmer reports small holes,Disease/Pest
+D30,What causes ejection of wooden sawdust from holes at leaf base or trunk?,Farmer sees sawdust ejecting,Disease/Pest
+D31,What causes small dried fruit hanging by silken threads?,Farmer observes hanging dried fruit,Disease/Pest
+D32,What causes dropped fruit with holes and silky remain close to fruit cap?,Farmer finds fruit drop with silk,Disease/Pest
+D33,What causes fruit to become dark red?,Farmer sees dark red fruit,Disease/Pest
+D34,What causes deep tunnels on fruit stalk?,Farmer finds tunnels in fruit stalk,Disease/Pest
+D35,What causes superficial and deep tunnels on green leaves?,Farmer sees tunnels in leaves,Disease/Pest
+D36,What causes malformation and twisting of offshoot leaves?,Farmer reports offshoot leaf twisting,Disease/Pest
+D37,What disease causes wilting on one side of leaf?,Farmer sees unilateral wilting,Disease/Pest
+D38,What causes dark brown stripe on leaf rachis (already D3 but different wording)?,Farmer sees stripe on rachis,Disease/Pest
+D39,What causes small parallel reddish-brown spots on leaf?,Farmer finds parallel spots,Disease/Pest
+D40,What causes small holes below inflorescence spathe?,Farmer sees holes below spathe,Disease/Pest
+D41,What causes inflorescences to become devoid of flowers and fruits?,Farmer reports empty inflorescence,Disease/Pest
+D42,What causes oozing of honeydew on leaflet (repeat of D10)?,Farmer sees honeydew,Disease/Pest
+D43,What causes deformation and curl of fruit?,Farmer sees fruit deformity,Disease/Pest
+D44,"What causes fruit stalk, leaf rachis, leaflet to become light green with brown spots?",Farmer reports light green with spots,Disease/Pest
+D45,What causes vertical tunnels at root zone and offshoots base?,Farmer finds tunnels at roots,Disease/Pest
+D46,What causes soil tunnels on leaf base?,Farmer sees soil tunnels on leaf base,Disease/Pest
+D47,What causes death of newly planted offshoots?,Farmer reports offshoot death after planting,Disease/Pest
+D48,What causes silken webbings around fruits and spikelets that collect dust?,Farmer sees webbings,Disease/Pest
+D49,What causes fruit skin to become leathery with cork texture?,Farmer reports leathery fruit skin,Disease/Pest
+D50,What causes fruits to become reddish-brown?,Farmer sees reddish‑brown fruit,Disease/Pest
+D51,What causes light brown spots with dark brown edges on leaflet and rachis?,Farmer finds light brown spots,Disease/Pest
+D52,What causes dark gray spots with reddish‑to‑brown edges on leaflet?,Farmer sees dark gray spots,Disease/Pest
+D53,What causes black sooty rot on leaflet?,Farmer reports black sooty rot,Disease/Pest
+D54,What is the suitable chemical control for Red palm weevil?,Farmer asks for pesticide,Control Methods
+D55,What is the suitable chemical control for Black scorch disease?,Farmer asks for fungicide,Control Methods
+D56,What is the suitable biological control for Palm frond borer damage?,Farmer asks for natural enemies,Control Methods
+D57,What is the suitable biological control for Red palm weevil?,Farmer asks for biological agents,Control Methods
+D58,What is the suitable chemical control for Inflorescence rot disease?,Farmer asks for fungicide,Control Methods
+D59,What is the suitable cultural control for Fusarium wilt disease?,Farmer asks for cultural practices,Control Methods
+D60,What is the suitable biological control for Fruit stalk borer damage?,Farmer asks for biological agents,Control Methods
+D61,What is the suitable chemical control for Bayoud disease?,Farmer asks for fungicide,Control Methods
+D62,What is the suitable cultural control for Black scorch disease?,Farmer asks for cultural practices,Control Methods
+D63,What is the suitable chemical control for Diplodia leaf‑base disease?,Farmer asks for fungicide,Control Methods
+D64,What is the application rate of Bavistin for Inflorescence rot disease?,Farmer asks for dosage,Control Methods
+D65,What is the application rate of Mancozeb for Black scorch disease?,Farmer asks for dosage,Control Methods
+D66,What is the application rate and method of Cypermethrin for Red palm weevil?,Farmer asks for dosage and method,Control Methods
+D67,How to apply Sodium hypochlorite for Fusarium wilt disease?,Farmer asks for application method,Control Methods
+D68,For which disease or pest is Methyl Bromide used?,Farmer asks for target,Control Methods
+D69,What is Metalaxyl‑M and for which disease or pest is it used?,Farmer asks for definition and target,Control Methods
+D70,What is the suitable chemical control for Graphiola leaf spot disease?,Farmer asks for fungicide,Control Methods
+D71,What is the suitable cultural control for Graphiola leaf spot disease?,Farmer asks for cultural practices,Control Methods
+D72,What is the suitable biological control for Longhorn date palm stem borer damage?,Farmer asks for biological agents,Control Methods
+D73,What is the application rate and method of Methidathion for Red palm weevil?,Farmer asks for dosage and method,Control Methods
+D74,What are the possible symptoms associated with Fusarium wilt disease?,Researcher asks for symptom list,Symptom
+D75,What are the possible symptoms associated with Red palm weevil damage?,Researcher asks for symptom list,Symptom
+D76,What are the possible symptoms associated with Inflorescence rot disease?,Researcher asks for symptom list,Symptom
+D77,What are the possible symptoms associated with Black scorch disease?,Researcher asks for symptom list,Symptom
+D78,What are the possible symptoms associated with Graphiola leaf spot disease?,Researcher asks for symptom list,Symptom
+D79,What are the most common general symptoms of plant disease or pest damage?,Student asks for common symptoms,Symptom
+D80,What does the “Die Back” symptom mean?,Student asks definition,Symptom
+D81,What does the “Blight” symptom mean?,Student asks definition,Symptom
+D82,What does the “Discolouration” symptom mean?,Student asks definition,Symptom
+D83,What does the “Scorch” symptom mean?,Student asks definition,Symptom
+D84,What are the distinct characteristics of “Wilting” symptom?,Researcher asks for characteristics,Symptom
+D85,What are the distinct characteristics of “Scorch” symptom?,Researcher asks for characteristics,Symptom
+D86,What are the distinct characteristics of “Shot_Hole” symptom?,Researcher asks for characteristics,Symptom
+D87,What are the distinct characteristics of “Gummosis” symptom?,Researcher asks for characteristics,Symptom
+D88,What are the distinct characteristics of “Blight” symptom?,Researcher asks for characteristics,Symptom
+D89,What is the scientific name of major agents of Inflorescence rot disease?,Pathologist asks for pathogen name,Causal Agents
+D90,What is the scientific name of major agents of Black scorch disease?,Pathologist asks for pathogen name,Causal Agents
+D91,What is the scientific name of major agents of Ganoderma butt rot disease?,Pathologist asks for pathogen name,Causal Agents
+D92,What is the scientific name of major agents of Anthracnose disease of date palm?,Pathologist asks for pathogen name,Causal Agents
+D93,What is the scientific name of major agents of Diplodia leaf‑base disease?,Pathologist asks for pathogen name,Causal Agents
+D94,What is the scientific name of major agents of Fusarium wilt disease?,Pathologist asks for pathogen name,Causal Agents
+D95,What is the scientific name of major agents of Reddish brown parallel spot disease?,Pathologist asks for pathogen name,Causal Agents
+D96,What is the scientific name of major agents of Date palm Dubas bug damage?,Entomologist asks for pest name,Causal Agents
+D97,What is the scientific name of major agents of Lesser date moth damage?,Entomologist asks for pest name,Causal Agents
+D98,What is the scientific name of major agents of Palm frond borer damage?,Entomologist asks for pest name,Causal Agents
+D99,What is the scientific name of major agents of Longhorn date palm stem borer damage?,Entomologist asks for pest name,Causal Agents
+D100,What is the scientific name of major agents of Mealy bugs damage?,Entomologist asks for pest name,Causal Agents
+D101,What are the most common types of biotic factors causing plant disease/damage?,Student asks for biotic agents,Causal Agents
+D102,What are the environmental factors contributing to Inflorescence rot disease?,Researcher asks for environmental triggers,Causal Agents
+D103,What are the environmental factors contributing to Black scorch disease?,Researcher asks for environmental triggers,Causal Agents
+D104,What are the environmental factors contributing to Red palm weevil?,Researcher asks for environmental triggers,Causal Agents
+D105,What are the agricultural practices that contribute to Fusarium wilt disease?,Researcher asks for agronomic factors,Causal Agents
+D106,What are the agricultural practices that contribute to Red palm weevil damage?,Researcher asks for agronomic factors,Causal Agents
+D107,What is the transmission mode of Fusarium Oxysporum Schlecht?,Researcher asks for spread mechanism,Causal Agents
+D108,What is the transmission mode of Rhynchophorus Ferrugineus?,Researcher asks for spread mechanism,Causal Agents
+D109,What is the active time (outbreak) of Rhynchophorus Ferrugineus?,Farmer asks for seasonal activity,Others
+D110,What is the expected outbreak time of Inflorescence rot disease?,Farmer asks for seasonal timing,Others
+D111,Which date palm varieties are most susceptible to Black scorch disease?,Farmer asks for susceptible cultivars,Others
+D112,Which varieties are most susceptible to Fusarium wilt disease?,Farmer asks for susceptible cultivars,Others
+D113,Which varieties are most susceptible to Inflorescence rot disease?,Farmer asks for susceptible cultivars,Others
+D114,Which varieties are most susceptible to Graphiola leaf spot disease?,Farmer asks for susceptible cultivars,Others
+D115,What are the possible affected plant parts by Graphiola leaf spot disease?,Researcher asks for affected parts,Others
+D116,What are the possible affected plant parts by Inflorescence rot disease?,Researcher asks for affected parts,Others
+D117,What are the possible affected plant parts by Red palm weevil damage?,Researcher asks for affected parts,Others
+D118,What are the possible affected plant parts by Longhorn date palm stem borer damage?,Researcher asks for affected parts,Others
+D119,What is the scientific name of major agents of Al‑Wijam disease? (extra draft later merged),Pathologist asks for obscure disease,Causal Agents
+D120,What is the chemical control for termite damage? (extra draft later removed),Farmer asks for termite control,Control Methods
