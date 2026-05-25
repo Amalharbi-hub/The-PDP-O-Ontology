@@ -1,0 +1,3 @@
+SELECT DISTINCT  ?Problem  ?Agent
+WHERE { ?Problem dp:influence dp:Date_Palm.    ?Problem  dp:has_Symptom   dp:Ejection_Of_Chewed_Up_Fibers_From_Wounds; dp:has_Symptom dp:Leaf_Become_Yellow; dp:has_Symptom dp:Offshoot_Become_Yellow; dp:is_Caused_By  ?Agent.
+?Agent  dp:has_Scientific_name ?Sname}
