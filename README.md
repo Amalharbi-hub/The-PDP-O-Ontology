@@ -36,6 +36,4 @@ The-PDP-O-Ontology/
 ├── traceability/             # CQ-to-use-case/class/reasoning mappings
 ├── evaluation/               # Expert-validation protocol and results
 ├── workshops/                # CQ-development workshop summaries
-├── results/                  # Query-output files and summary tables
-├── documentation/            # Additional ontology documentation
-└── images/                   # Diagrams and workflow figures
+└── figures/                   # Diagrams and workflow figures
