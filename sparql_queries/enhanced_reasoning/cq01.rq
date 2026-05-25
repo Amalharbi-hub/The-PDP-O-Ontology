@@ -1,0 +1,1 @@
+SELECT DISTINCT ?disease WHERE { ?disease rdf:type/rdfs:subClassOf* :Infectious_Plant_Disease . } ORDER BY ?disease
