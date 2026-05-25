@@ -1,7 +1,43 @@
 # PDP-O Competency Questions Evaluation
 
-This README presents the competency questions (CQs), SPARQL queries, and answers used to evaluate the PDP-O ontology.
+This folder contains the competency questions used to evaluate PDP-O.
 
+Two CQ sets are provided:
+
+1. **Domain CQs:** 90 questions evaluating domain coverage.
+2. **Enhanced Reasoning CQs:** 20 questions evaluating OWL/SWRL reasoning capabilities.
+
+## Domain CQs
+
+The 90 domain CQs are grouped into five evaluation categories:
+
+- Disease/Pest
+- Control Methods
+- Symptom
+- Causal Agents
+- Others
+
+## Enhanced Reasoning CQs
+
+The 20 enhanced reasoning CQs evaluate six reasoning capabilities:
+
+- Subsumption reasoning
+- Property-hierarchy reasoning
+- Inverse-property reasoning
+- Transitive-property reasoning
+- SWRL Rule 17-based reasoning
+- SWRL Rule 18-based reasoning
+
+Each CQ is linked to:
+
+- natural-language question;
+- SPARQL query;
+- ontology-generated answer;
+- relevant ontology classes and properties;
+- reasoning type;
+- expert-validation score.
+
+See the traceability matrix in `../traceability/complete_traceability_matrix.xlsx`.
 The SPARQL queries were executed after applying the OWL/SWRL reasoning environment. The queries explicitly test reasoning paths including subclass traversal, subproperty traversal, inverse-property traversal, transitive part-of traversal, and SWRL rule-pattern matching.
 
 ---
