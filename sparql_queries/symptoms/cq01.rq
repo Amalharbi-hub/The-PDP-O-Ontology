@@ -1,0 +1,4 @@
+SELECT DISTINCT  ?Problem ?Symptom
+WHERE {  ?Problem dp:influence dp:Date_Palm;
+                                 dp:has_Symptom ?Symptom.
+                                 FILTER(?Problem = dp:Fusarium_Wilt_Disease)}
