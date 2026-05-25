@@ -1,141 +1,141 @@
-Because the original tables are very large and contain multi-line SPARQL queries, the README format below uses collapsible `<details id="__DETAIL_0__"/>
+# PDP-O Competency Questions Evaluation
 
-<details id="__DETAIL_1__"/>
+This README presents the competency questions (CQs), SPARQL queries, and answers used to evaluate the PDP-O ontology.
 
-<details id="__DETAIL_2__"/>
-
-<details id="__DETAIL_3__"/>
-
-<details id="__DETAIL_4__"/>
-
-> The remaining Disease / Pest CQs in `final_90_cqs.csv` follow the same structure.
+The SPARQL queries were executed after applying the OWL/SWRL reasoning environment. The queries explicitly test reasoning paths including subclass traversal, subproperty traversal, inverse-property traversal, transitive part-of traversal, and SWRL rule-pattern matching.
 
 ---
 
-## 1.2 Control Method CQs
+## 1. Competency Questions Formulated for PDP-O Evaluation
 
-<details id="__DETAIL_5__"/>
+**Source file:** `final_90_cqs.csv`
 
-<details id="__DETAIL_6__"/>
-
-<details id="__DETAIL_7__"/>
-
-<details id="__DETAIL_8__"/>
-
----
-
-## 1.3 Symptom CQs
-
-<details id="__DETAIL_9__"/>
-
-<details id="__DETAIL_10__"/>
-
-<details id="__DETAIL_11__"/>
-
----
-
-## 1.4 Causal Agent CQs
-
-<details id="__DETAIL_12__"/>
-
-<details id="__DETAIL_13__"/>
-
-<details id="__DETAIL_14__"/>
-
----
-
-## 1.5 Other CQs
-
-<details id="__DETAIL_15__"/>
-
-<details id="__DETAIL_16__"/>
+| Category | CQ | SPARQL Query | Answer by PDP-O |
+| --- | --- | --- | --- |
+| Disease / Pest | **CQ1:** What do the following symptoms indicate?<br><br>1. Ejection of chewed up fibers from wounds on palm trunk.<br>2. Palm leaves and offshoot become yellow. | `SELECT DISTINCT ?Problem ?Agent WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Ejection_Of_Chewed_Up_Fibers_From_Wounds; dp:has_Symptom dp:Leaf_Become_Yellow; dp:has_Symptom dp:Offshoot_Become_Yellow; dp:is_Caused_By ?Agent. ?Agent dp:has_Scientific_name ?Sname }` | **Problem:**<br>1. Red palm weevil damage |
+| Disease / Pest | **CQ2:** What do the following symptoms indicate?<br><br>1. Cylindrical oblique holes appear on the palm trunk and leaf base.<br>2. Brown sticky material at holes on palm trunk. | `SELECT DISTINCT ?Problem ?Sname WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Cylindrical_Oblique_Holes_On_Trunk_And_Leaf_Base; dp:has_Symptom dp:Brown_Sticky_Material_At_Holes_On_Trunk; dp:is_Caused_By ?Agent. ?Agent dp:has_Scientific_name ?Sname }` | **Problem:**<br>1. Longhorn date palm stem borer damage |
+| Disease / Pest | **CQ3:** What does the following symptom indicate?<br><br>1. Dark brown stripe appears on the dorsal side of rachis from the base to the top. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom ?Symptom. ?Symptom dp:is_Appear_On dp:Leaf_Rachis. FILTER (?Symptom = dp:Dark_Brown_Stripe_On_Leaf_Rachis) }` | **Problem:**<br>1. Bayoud disease<br>2. Fusarium wilt disease<br>3. Reddish brown parallel spot disease |
+| Disease / Pest | **CQ4:** What do the following symptoms indicate?<br><br>1. Brown or rusty spots appear on the external surface of unopening inflorescence.<br>2. Inflorescences covered with white powdery. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Brown_Or_Rusty_Spots; dp:has_Symptom dp:Inflorescences_Covered_With_White_Powdery }` | **Problem:**<br>1. Inflorescence rot disease |
+| Disease / Pest | **CQ5:** What do the following symptoms indicate?<br><br>1. Longitudinal tunnels and holes on fruit bunch.<br>2. Spikelets tips become light gray to silver.<br>3. Holes on unopened spathe. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Longitudinal_Tunnels_And_Holes_On_Fruit_Bunch; dp:has_Symptom dp:Spikelets_Tips_Become_Light_Gray_To_Silver; dp:has_Symptom dp:Holes_On_Unopened_Spathe. }` | **Problem:**<br>1. Greater date moth damage |
+| Disease / Pest | **CQ6:** What do the following symptoms indicate?<br><br>1. Leaflet becomes light green or yellowish green.<br>2. Oozing of honeydew on leaflet. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Leaflet_Become_Light_Green_Or_Yellowish_Green; dp:has_Symptom dp:Oozing_Of_Honeydew_On_Leaflet. }` | **Problem:**<br>1. Date palm dubas bug damage |
+| Disease / Pest | **CQ7:** What do the following symptoms indicate?<br><br>1. A yellowish-brown stripe on leaf base and leaf rachis.<br>2. Leaf base rot.<br>3. Death of offshoot. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Yellowish_Brown_Stripe_On_Leaf_Base_And_Leaf_Rachis; dp:has_Symptom dp:Death_Of_Offshoot; dp:has_Symptom dp:Leaf_Base_Rot }` | **Problem:**<br>1. Diplodia leaf-base disease |
+| Disease / Pest | **CQ8:** What do the following symptoms indicate?<br><br>1. Deformation of leaves.<br>2. Brown spots with a light center and dark edge surrounded by a yellow halo on the leaflet. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Deformation_Of_Leaves; dp:has_Symptom dp:Brown_Spot_With_Light_Center_And_Dark_Edge_Surrounded_By_Yellow_Halo_On_Leaflet }` | **Problem:**<br>1. Anthracnose disease |
+| Disease / Pest | **CQ9:** What do the following symptoms indicate?<br><br>1. Pale spots surrounded by a brown ring on leaflet.<br>2. Circular or irregular scorched shot holes on the leaf edge. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Pale_Spot_Surrounded_By_Brown_Ring_On_Leaflet; dp:has_Symptom dp:Circular_Or_Irregular_Scorched_Shot_Holes_On_Leaf_Edge. }` | **Problem:**<br>1. Shot hole disease of date palm |
+| Disease / Pest | **CQ10:** What do the following symptoms indicate?<br><br>1. Sticky material at entrance holes on leaf rachis.<br>2. Tunnels at leaf rachis.<br>3. Leaf becomes powdery. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Sticky_Material_At_Entrance_Holes_On_Leaf_Rachis; dp:has_Symptom dp:Tunnels_At_Leaf_Rachis; dp:has_Symptom dp:Leaf_Become_Powdery. }` | **Problem:**<br>1. Palm frond borer damage |
+| Disease / Pest | **CQ11:** What do the following symptoms indicate?<br><br>1. Death of leaflet from the tip backwards.<br>2. Malformation and twisting of leaf.<br>3. Leaf with a scorched or charcoal-like appearance. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Malformation_And_Twisting_Of_Leaf; dp:has_Symptom dp:Death_Of_Leaflet_From_the_Tip_Backwards; dp:has_Symptom dp:Leaf_With_Scorched_Or_Charcoal_Like__Appearance. }` | **Problem:**<br>1. Black scorch disease |
+| Disease / Pest | **CQ12:** What do the following symptoms indicate?<br><br>1. Subepidermal spots on both sides of the leaflet and rachis.<br>2. Yellow pustules that turn black on lower old leaf.<br>3. Drying of leaf. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Subepidermal_Spots_On_Both_sides_Of_Leaflet_and_Rachis; dp:has_Symptom dp:Yellow_Pustules_That_Turn_Black_On_Lower_Old_Leaf; dp:has_Symptom dp:Drying_Of_Leaf. }` | **Problem:**<br>1. Graphiola leaf spot disease |
+| Disease / Pest | **CQ13:** What do the following symptoms indicate?<br><br>1. Leaflet tip and edges become burnt grey.<br>2. Small yellow or brown circular spots on leaflet and leaf rachis. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Leaflet_Tip_And_Edges_Become_Burnt_Grey; dp:has_Symptom dp:Small_Yellow_Or_Brown_Circular_Spot_On_Leaflet_And_Leaf_Rachis. }` | **Problem:**<br>1. Pestalotia leaf spot disease |
+| Disease / Pest | **CQ14:** What do the following symptoms indicate?<br><br>1. Small holes like shotgun bullets on trunk and leaf base.<br>2. Ejection of wooden sawdust from holes at leaf base or trunk. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Small_Holes_Like_Shotgun_Bullets_On_Trunk_And_Leaf_Base; dp:has_Symptom dp:Ejection_Of_Wooden_Sawdust_From_Holes_At_Leaf_Base_Or_Trunk. }` | **Problem:**<br>1. Bark beetle damage |
+| Disease / Pest | **CQ15:** What do the following symptoms indicate?<br><br>1. Small and dried fruit hanging by silken threads.<br>2. Dropped fruit with holes and silky remain close to fruit cap.<br>3. Fruit becomes dark red. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Small_Dried_Fruit_Hanging_By_Silken_Threads; dp:has_Symptom dp:Fruit_Becomes_Dark_Red; dp:has_Symptom dp:Dropped_Fruit_With_Holes_And_Silky_Remain_Close_To_Fruit_Cap. }` | **Problem:**<br>1. Lesser date moth damage |
+| Disease / Pest | **CQ16:** What do the following symptoms indicate?<br><br>1. Deep tunnels on fruit stalk.<br>2. Superficial and deep tunnels on green leaves.<br>3. Malformation and twisting of offshoot leaves. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Deep_Tunnels_On_Fruit_Stalk; dp:has_Symptom dp:Malformation_And_Twisting_Of_Offshoot_Leaves; dp:has_Symptom dp:Superficial_And_Deep_Tunnels_On_Green_Leaf. }` | **Problem:**<br>1. Fruit stalk borer damage |
+| Disease / Pest | **CQ17:** What do the following symptoms indicate?<br><br>1. Wilting on one side of leaf.<br>2. Dark brown stripe on leaf rachis. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Wilting_On_One_Side_Of_Leaf; dp:has_Symptom dp:Dark_Brown_Stripe_On_Leaf_Rachis. }` | **Problem:**<br>1. Bayoud disease<br>2. Fusarium wilt disease |
+| Disease / Pest | **CQ18:** What do the following symptoms indicate?<br><br>1. Small parallel reddish-brown spots on leaf.<br>2. Dark brown stripe appears on the dorsal side of rachis. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Small_Parallel_Reddish_Brown_Spot_On_Leaf; dp:has_Symptom dp:Dark_Brown_Stripe_On_Leaf_Rachis. }` | **Problem:**<br>1. Reddish brown parallel spot disease |
+| Disease / Pest | **CQ19:** What do the following symptoms indicate?<br><br>1. Small holes below of inflorescence spathe.<br>2. Inflorescences become devoid of flowers and fruits. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Small_Holes_Below_Of_Inflorescence_Spathe; dp:has_Symptom dp:Inflorescences_Become_Devoid_Of_Flowers_And_Fruits. }` | **Problem:**<br>1. Date palm inflorescence weevil damage |
+| Disease / Pest | **CQ20:** What do the following symptoms indicate?<br><br>1. Oozing of honeydew on leaflet.<br>2. Deformation and curl of fruit. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Oozing_Of_Honeydew_On_Leaflet; dp:has_Symptom dp:Deformation_And_Curl_Of_Fruit. }` | **Problem:**<br>1. Mealy bugs damage |
+| Disease / Pest | **CQ21:** What do the following symptoms indicate?<br><br>1. Fruit stalk, leaf rachis, and leaflet become light green with brown spots.<br>2. Deformation and curl of fruit. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Palm_Tissue_Become_Light_Green_With_Brown_Spots; dp:has_Symptom dp:Deformation_And_Curl_Of_Fruit. }` | **Problem:**<br>1. Parlatoria date scale damage |
+| Disease / Pest | **CQ22:** What do the following symptoms indicate?<br><br>1. Vertical tunnels at the root zone and offshoots base.<br>2. Soil tunnels on leaf base.<br>3. Death of newly planted offshoots. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Vertical_Tunnels_At_Root_Zone_And_Offshoots_Base; dp:has_Symptom dp:Death_Of_Newly_Planted_Offshoots; dp:has_Symptom dp:Soil_Tunnels_On_Leaf_Base. }` | **Problem:**<br>1. Termites damage |
+| Disease / Pest | **CQ23:** What do the following symptoms indicate?<br><br>1. Silken webbings around fruits and spikelets that collect dust.<br>2. Fruit skin becomes leathery with a cork texture.<br>3. Fruits become reddish brown. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Silken_Webbings_Around_Fruits_And_Spikelet_That_Collect_Dust; dp:has_Symptom dp:Fruit_Skin_Becomes_Leathery_With_Cork_Texture; dp:has_Symptom dp:Fruits_Become_Reddish_Brown. }` | **Problem:**<br>1. Old world date mite damage |
+| Disease / Pest | **CQ24:** What do the following symptoms indicate?<br><br>1. Light brown spots with dark brown edges on the leaflet and leaf rachis.<br>2. Dark gray spots with reddish-to-brown edges on both surfaces of the leaflet. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Light_Brown_Spot_With_Dark_Brown_Edges_On_Leaflet; dp:has_Symptom dp:Dark_Gray_Spot_With_Reddish_To_Brown_Edges. }` | **Problem:**<br>1. Rectangular pale brown spot disease |
+| Disease / Pest | **CQ25:** What does the following symptom indicate?<br><br>1. Black sooty rot appears on the leaflet. | `SELECT DISTINCT ?Problem WHERE { ?Problem dp:influence dp:Date_Palm. ?Problem dp:has_Symptom dp:Black_Sooty_Rot. }` | **Problem:**<br>1. Date palm Dubas bug damage<br>2. Mealy bugs damage |
 
 ---
 
-# 2. Enhanced Reasoning Competency Questions
+## 2. Control Method CQs
 
-Source file: `final_20_cqs.csv`
-
-The enhanced reasoning CQs evaluate ontology reasoning capabilities including:
-
-- subsumption reasoning
-- property hierarchy reasoning
-- inverse property reasoning
-- transitive property reasoning
-- SWRL Rule 17
-- SWRL Rule 18
-
----
-
-## 2.1 Subsumption
-
-<details id="__DETAIL_17__"/>
-
-<details id="__DETAIL_18__"/>
-
-<details id="__DETAIL_19__"/>
+| Category | CQ | SPARQL Query | Answer by PDP-O |
+| --- | --- | --- | --- |
+| Control Method | **CQ1:** What is the suitable chemical control of Red palm weevil? | `SELECT DISTINCT ?SName ?Chemical_Control WHERE { ?Pest dp:is_Parasite_Of dp:Date_Palm. { ?Pest dp:has_Common_Name ?SName. FILTER (regex(str(?SName),"Red palm weevil","i")) } ?Pest dp:has_Chemical_Control ?Chemical_Control }` | **Chemical Control:**<br>1. Cypermethrin<br>2. Deltamethrin<br>3. Methidathion |
+| Control Method | **CQ2:** What is the suitable chemical control of Black scorch disease of date palm? | `SELECT DISTINCT ?Disease ?Chemical_Control WHERE { ?Disease dp:is_Disease_Of dp:Date_Palm. ?Disease dp:has_Chemical_Control ?Chemical_Control. FILTER(?Disease = dp:Black_Scorch_Disease) }` | **Chemical Control:**<br>1. Thiophanate Methyl<br>2. Metalaxyl-M<br>3. Bordeaux Mixture<br>4. Mancozeb<br>5. Copper Oxychloride |
+| Control Method | **CQ3:** What is the suitable biological control of Palm frond borer damage? | `SELECT DISTINCT ?Damage ?Biological_Control WHERE { ?Damage dp:is_Pest_Damage_Of dp:Date_Palm. ?Damage dp:has_Biological_Control ?Biological_Control. FILTER(?Damage = dp:Palm_Frond_Borer_Damage) }` | **Biological Control:**<br>1. Metarhizium anisopliae<br>2. Beauveria bassiana<br>3. Rhabdits blumi |
+| Control Method | **CQ4:** What is the suitable biological control of Red palm weevil? | `SELECT DISTINCT ?SName ?Biological_Control WHERE { ?Pest dp:is_Pest_Of dp:Date_Palm. { ?Pest dp:has_Common_Name ?SName. FILTER (regex(str(?SName),"Red palm weevil","i")) } ?Pest dp:has_Biological_Control ?Biological_Control }` | **Biological Control:**<br>1. Chelisoches morio f<br>2. Platymeris laevicollis distant<br>3. Steinernema feltiae<br>4. Steinernema carpocapsae<br>5. Tetrapholypus rhynchophori<br>6. Beauveria bassiana<br>7. Scolia erratica smith<br>8. Heterorhabditis spp<br>9. Sarcophaga fuscicauda bottcher |
+| Control Method | **CQ5:** What is the suitable chemical control of Inflorescence rot disease? | `SELECT DISTINCT ?Disease ?Chemical_Control WHERE { ?Disease dp:is_Disease_Of dp:Date_Palm. ?Disease dp:has_Chemical_Control ?Chemical_Control. FILTER(?Disease = dp:Inflorescence_Rot_Disease) }` | **Chemical Control:**<br>1. Thiophanate_Methyl<br>2. Maneb<br>3. Benomyl<br>4. Metalaxyl-M<br>5. Mancopper<br>6. Bordeaux_Mixture<br>7. Mancozeb<br>8. Copper_Oxychloride<br>9. Dichlone<br>10. Bavistin<br>11. Thiram |
+| Control Method | **CQ6:** What is the suitable cultural control of Fusarium wilt disease? | `SELECT DISTINCT ?Disease ?Cultural_Control WHERE { ?Disease dp:is_Disease_Of dp:Date_Palm. ?Disease dp:has_Cultural_Control ?Cultural_Control. FILTER(?Disease = dp:Fusarium_Wilt_Disease) }` | **Cultural Control:**<br>1. Use of thermal sterilization<br>2. Avoid excessive irrigation<br>3. Stop planting in the same site<br>4. Uprooted and burned infected palms on the spot<br>5. Agricultural quarantine<br>6. Stop planting of Hijazi Alfalfa |
+| Control Method | **CQ11:** What is the application rate of Bavistin to control Inflorescence rot disease? | `SELECT DISTINCT ?Disease ?Chemical_Control ?Application_Rate WHERE { ?Disease dp:is_Disease_Of dp:Date_Palm. ?Disease dp:has_Chemical_Control ?Chemical_Control. ?Chemical_Control dp:has_Application_Rate ?Application_Rate. FILTER(?Chemical_Control = dp:Bavistin && (?Disease = dp:Inflorescence_Rot_Disease)) }` | **Application Rate:**<br>100–150 g/100 L water, about 10 L of pesticide |
+| Control Method | **CQ13:** What is the application rate and method of Cypermethrin to control Rhynchophorus Ferrugineus? | `SELECT DISTINCT ?Pest ?Chemical_Control ?Application_Rate ?Application_Method WHERE { ?Pest dp:is_Pest_Of dp:Date_Palm. ?Pest dp:has_Chemical_Control ?Chemical_Control. ?Chemical_Control dp:has_Application_Rate ?Application_Rate; dp:has_Application_Method ?Application_Method. FILTER(?Chemical_Control = dp:Cypermethrin && (?Pest = dp:Rhynchophorus_Ferrugineus)) }` | **Application Rate:** 100 ml /100 liters of water<br>**Application Method:** Spraying |
+| Control Method | **CQ15:** For which disease or pest is Methyl Bromide used? | `SELECT DISTINCT ?Control_Method ?DiseaseName WHERE { ?DiseaseName dp:is_Disease_Of dp:Date_Palm. ?DiseaseName dp:has_Recommended_Control ?Control_Method. FILTER(?Control_Method = dp:Methyl_Bromide) }` | **Disease/Pest:**<br>1. Bayoud disease<br>2. Fusarium wilt disease |
+| Control Method | **CQ20:** What is the application rate and method of Methidathion to control Rhynchophorus Ferrugineus? | `SELECT DISTINCT ?Pest ?Chemical_Control ?Application_Rate ?Application_Method WHERE { ?Pest dp:is_Pest_Of dp:Date_Palm. ?Pest dp:has_Chemical_Control ?Chemical_Control. ?Chemical_Control dp:has_Application_Rate ?Application_Rate; dp:has_Application_Method ?Application_Method. FILTER(?Chemical_Control = dp:Methidathion && (?Pest = dp:Rhynchophorus_Ferrugineus)) }` | **Application Rate:** 150 ml /100 liters of water<br>**Application Method:** Spraying |
 
 ---
 
-## 2.2 Property Hierarchy
+## 3. Symptom CQs
 
-<details id="__DETAIL_20__"/>
-
-<details id="__DETAIL_21__"/>
-
----
-
-## 2.3 Inverse Properties
-
-<details id="__DETAIL_22__"/>
-
-<details id="__DETAIL_23__"/>
-
----
-
-## 2.4 Transitive Properties
-
-<details id="__DETAIL_24__"/>
-
-<details id="__DETAIL_25__"/>
+| Category | CQ | SPARQL Query | Answer by PDP-O |
+| --- | --- | --- | --- |
+| Symptom | **CQ1:** What are the possible symptoms associated with Fusarium wilt disease? | `SELECT DISTINCT ?Problem ?Symptom WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. FILTER(?Problem = dp:Fusarium_Wilt_Disease) }` | **Symptoms:**<br>1. Dark brown stripe on leaf rachis<br>2. Wilting on one side of leaf<br>3. Leaf become yellow white on one side<br>4. Rapid wilting of offshoots<br>5. Root rot<br>6. Leaves hang down along the trunk<br>7. Leaves become arched |
+| Symptom | **CQ2:** What are the possible symptoms associated with Red palm weevil damage? | `SELECT DISTINCT ?Problem ?Symptom WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. FILTER(?Problem = dp:Red_Palm_Weevil_Damage) }` | **Symptoms:**<br>1. Leaf becomes yellow<br>2. Oozing of brownish fluid with typical fermented odor<br>3. Tunneling of palm tissue<br>4. Wilting of offshoots<br>5. Holes that look chewed and broken on leaf<br>6. Small round holes at the site of removed offshoots<br>7. Ejection of chewed-up fibers from wounds<br>8. Toppling of the trunk<br>9. Drying of leaf and fruit bunch<br>10. Offshoot becomes yellow<br>11. Drying of offshoots<br>12. Death of offshoot<br>13. Wilting of leaf |
+| Symptom | **CQ3:** What are the possible symptoms associated with Inflorescence rot disease? | `SELECT DISTINCT ?Problem ?Symptom WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. FILTER(?Problem = dp:Inflorescence_Rot_Disease) }` | **Symptoms:**<br>1. Rot of young green fruit<br>2. Brown or rusty spots<br>3. Partial or complete destruction of flowers and spikelets<br>4. Inflorescences covered with pink or white or black powder<br>5. Drying of inflorescence<br>6. Rot of flowers and spikelets |
+| Symptom | **CQ4:** What are the possible symptoms associated with Black scorch disease? | `SELECT DISTINCT ?Problem ?Symptom WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. FILTER(?Problem = dp:Black_Scorch_Disease) }` | **Symptoms:**<br>1. Death of leaflet from the tip backwards<br>2. Trunk rot<br>3. Malformation and twisting of leaf<br>4. Inflorescence blight<br>5. Black rot on inflorescence<br>6. Leaf with scorched or charcoal-like appearance<br>7. Root rot<br>8. Dark brown or black hard lesions on leaves<br>9. Terminal bud rot and blackening<br>10. Round to oblong dark brown spots<br>11. Diminishes growth of new leaves |
+| Symptom | **CQ5:** What are the possible symptoms associated with Graphiola leaf spot disease? | `SELECT DISTINCT ?Problem ?Symptom WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. FILTER(?Problem = dp:Graphiola_Leaf_Spot_Disease) }` | **Symptoms:**<br>1. Yellow pustules that turn black on lower old leaves<br>2. Drying of leaves<br>3. Subepidermal spots on both sides of leaflet and rachis |
+| Symptom | **CQ6:** What are the most common general symptoms of plant disease or pest damage? | `SELECT DISTINCT ?Common_Symptom WHERE { ?Common_Symptom rdfs:subClassOf dp:Symptom. }` | **Most Common Symptoms:**<br>Die_Back, Blight, Dryness, Spotting, Dwarfing, Shot_Hole, Downy_Mildew, Canker, Spores, Rust, Mildew, Death, Exudation, Powdery_Mildew, Wilting, Ejection, Necrosis_Lesion, Scorch, Puncture, Damping_Off, Malformation, Discoloration, Rotting, Pustule, Streaking, Boring, Gummosis, Transformation, Breaking |
+| Symptom | **CQ7:** What does the Die_Back symptom mean? | `SELECT DISTINCT ?Symptom ?Symptom_Definition WHERE { ?Symptom dp:definetion ?Symptom_Definition. FILTER(?Symptom = dp:Die_Back) }` | **Definition:** Progressive death of shoots, branches and roots generally starting at the tip. |
+| Symptom | **CQ8:** What does the Blight symptom mean? | `SELECT DISTINCT ?Symptom ?Symptom_Definition WHERE { ?Symptom dp:definetion ?Symptom_Definition. FILTER(?Symptom = dp:Blight) }` | **Definition:** Sudden, severe, and extensive spotting, discoloration, wilting, or destruction of leaves, flowers, stems, or entire plants. |
+| Symptom | **CQ10:** What does the Scorch symptom mean? | `SELECT DISTINCT ?Symptom ?Symptom_Definition WHERE { ?Symptom dp:definetion ?Symptom_Definition. FILTER(?Symptom = dp:Scorch) }` | **Definition:** Any symptom that suggests the action of flame or fire on the affected part, often seen at the margins of leaves; burning of leaf margins as a result of infection or unfavorable environmental conditions. |
+| Symptom | **CQ11:** What are the distinct characteristics of Wilting? | `SELECT ?Class ?has_Characteristic WHERE { ?Class rdfs:subClassOf [ rdf:type owl:Restriction; owl:hasValue ?has_Characteristic; owl:onProperty dp:has_Characteristic ] FILTER(?Class = dp:Wilting) }` | **Characteristics:**<br>1. Drying of young growing tip or the whole plant<br>2. Leaves become flaccid<br>3. Leaves become yellow<br>4. Leaves droop down<br>5. Leaves lose their turgidity<br>6. Sick or weak appearance |
 
 ---
 
-## 2.5 SWRL Rule 17
+## 4. Causal Agent CQs
 
-<details id="__DETAIL_26__"/>
-
-<details id="__DETAIL_27__"/>
-
----
-
-## 2.6 SWRL Rule 18
-
-<details id="__DETAIL_28__"/>
-
-<details id="__DETAIL_29__"/>
-
----
-
-## 2.7 SWRL Rules
-
-<details id="__DETAIL_30__"/>
-
-<details id="__DETAIL_31__"/>
+| Category | CQ | SPARQL Query | Answer by PDP-O |
+| --- | --- | --- | --- |
+| Causal Agent | **CQ1:** What is the scientific name of major agents of Inflorescence rot disease? | `SELECT DISTINCT ?Problem ?Causal_Agent_Scientific_name WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Caused_By ?Causal_Agent. ?Causal_Agent dp:has_Scientific_name ?Causal_Agent_Scientific_name. FILTER(?Problem = dp:Inflorescence_Rot_Disease) }` | **Major Agents:**<br>1. Alternaria alternata<br>2. Thieaviopsis Paradoxa<br>3. Alternaria chlamydospore<br>4. Fusarium moniliforme J. Sheld.<br>5. Mauginiella Scattae Cav. |
+| Causal Agent | **CQ2:** What is the scientific name of major agents of Black scorch disease? | `SELECT DISTINCT ?Problem ?Causal_Agent_Scientific_name WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Caused_By ?Causal_Agent. ?Causal_Agent dp:has_Scientific_name ?Causal_Agent_Scientific_name. FILTER(?Problem = dp:Black_Scorch_Disease) }` | **Major Agents:**<br>1. Ceratocystis Paradoxa<br>2. Chalara Paradoxa |
+| Causal Agent | **CQ3:** What is the scientific name of major agents of Ganoderma butt rot disease? | `SELECT DISTINCT ?Problem ?Causal_Agent_Scientific_name WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Caused_By ?Causal_Agent. ?Causal_Agent dp:has_Scientific_name ?Causal_Agent_Scientific_name. FILTER(?Problem = dp:Ganoderma_Butt_Rot_Disease) }` | **Major Agents:**<br>1. Ganoderma zonatum<br>2. Ganoderma Tornatum<br>3. Ganoderma boninense |
+| Causal Agent | **CQ6:** What is the scientific name of major agents of Fusarium wilt disease? | `SELECT DISTINCT ?Problem ?Causal_Agent_Scientific_name WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Caused_By ?Causal_Agent. ?Causal_Agent dp:has_Scientific_name ?Causal_Agent_Scientific_name. FILTER(?Problem = dp:Fusarium_Wilt_Disease) }` | **Major Agent:**<br>1. Fusarium Oxysporum Schlecht. |
+| Causal Agent | **CQ8:** What is the scientific name of major agents of Date palm Dubas bug damage? | `SELECT DISTINCT ?Problem ?Causal_Agent_Scientific_name WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Caused_By ?Causal_Agent. ?Causal_Agent dp:has_Scientific_name ?Causal_Agent_Scientific_name. FILTER(?Problem = dp:Date_Palm_Dubas_Bug_Damage) }` | **Major Agent:**<br>1. Ommatissus lybicus de Bergevin |
+| Causal Agent | **CQ13:** What are the most common types of biotic factors that contribute to plant disease or damage? | `SELECT DISTINCT ?Biotic_Causal_Agent WHERE { ?Biotic_Causal_Agent rdfs:subClassOf dp:Biotic_Causal_Agent. }` | **Biotic Factors:**<br>1. Fungi<br>2. Virus<br>3. Nematode<br>4. Protozoa<br>5. Viroid<br>6. Parasitic Plant<br>7. Bacteria<br>8. Phytoplasma<br>9. Pest Insect<br>10. Pest Mite |
+| Causal Agent | **CQ14:** What are the environmental factors that contribute to Inflorescence rot disease? | `SELECT DISTINCT ?Problem ?Environmental_Factor WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Preferable_Environmental_Factor ?Environmental_Factor. FILTER(?Problem = dp:Inflorescence_Rot_Disease) }` | **Environmental Factors:**<br>1. High humidity<br>2. 15–21°C in spring<br>3. Low temperature<br>4. Cold and wet winter<br>5. Heavy rain in winter and spring |
+| Causal Agent | **CQ19:** What is the transmission mode of Fusarium Oxysporum Schlecht? | `SELECT DISTINCT ?Causal_Agent ?Causal_Agent_Trait WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Caused_By ?Causal_Agent. ?Causal_Agent dp:has_Trait ?Causal_Agent_Trait FILTER(?Causal_Agent = dp:Fusarium_Oxysporum_Schlecht) }` | **Transmission Mode:**<br>1. Transmitted through infected offshoots<br>2. Transmitted through nematode infection<br>3. Transmitted through winds<br>4. Transmitted through insect infection |
 
 ---
 
-# Notes
+## 5. Other CQs
 
-- Prefixes such as `dp:`, `rdf:`, `rdfs:`, `owl:`, `ppo:`, and `:` should be defined according to the ontology namespace used in PDP-O.
-- Some answers are simplified for readability in this README.
-- The full CQ lists are available in:
-  - `final_90_cqs.csv`
-  - `final_20_cqs.csv`
+| Category | CQ | SPARQL Query | Answer by PDP-O |
+| --- | --- | --- | --- |
+| Others | **CQ1:** What is the active time of Rhynchophorus Ferrugineus? | `SELECT DISTINCT ?Pest ?Outbreak_Time WHERE { ?Pest dp:is_Pest_Of dp:Date_Palm; dp:has_Time ?Outbreak_Time. FILTER(?Pest = dp:Rhynchophorus_Ferrugineus) }` | **Outbreak Time:**<br>1. February<br>2. October<br>3. September<br>4. March |
+| Others | **CQ2:** What is the expected outbreak time of Inflorescence rot disease? | `SELECT DISTINCT ?Problem ?Outbreak_Time WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Time ?Outbreak_Time. FILTER(?Problem = dp:Inflorescence_Rot_Disease) }` | **Outbreak Time:**<br>1. February<br>2. March |
+| Others | **CQ3:** What varieties or cultivars are most susceptible to Black scorch disease? | `SELECT DISTINCT ?Problem ?Susceptible_Cultivars WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Harmful_For ?Susceptible_Cultivars. FILTER(?Problem = dp:Black_Scorch_Disease) }` | **Susceptible Cultivars:**<br>1. Halooa<br>2. Zahdi<br>3. Barhi<br>4. Hallawi<br>5. Deglet_Nour<br>6. Medjool |
+| Others | **CQ4:** What varieties or cultivars are most susceptible to Fusarium wilt disease? | `SELECT DISTINCT ?Problem ?Susceptible_Cultivars WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Harmful_For ?Susceptible_Cultivars. FILTER(?Problem = dp:Fusarium_Wilt_Disease) }` | **Susceptible Cultivars:**<br>1. Dakhini<br>2. Nbut_Saif<br>3. Khediri |
+| Others | **CQ5:** What varieties or cultivars are most susceptible to Inflorescence rot disease? | `SELECT DISTINCT ?Problem ?Susceptible_Cultivars WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Harmful_For ?Susceptible_Cultivars. FILTER(?Problem = dp:Inflorescence_Rot_Disease) }` | **Susceptible Cultivars:**<br>1. Sayer<br>2. Sukari<br>3. Barhi<br>4. Medjool<br>5. Ghars |
+| Others | **CQ6:** What varieties or cultivars are most susceptible to Graphiola leaf spot disease? | `SELECT DISTINCT ?Problem ?Susceptible_Cultivars WHERE { ?Problem dp:influence dp:Date_Palm; dp:is_Harmful_For ?Susceptible_Cultivars. FILTER(?Problem = dp:Graphiola_Leaf_Spot_Disease) }` | **Susceptible Cultivars:**<br>1. Zahdi<br>2. Maktoom<br>3. Ashrasi<br>4. Khisab<br>5. Bream |
+| Others | **CQ7:** What are the possible affected plant parts by Graphiola leaf spot disease? | `SELECT DISTINCT ?Problem ?PlantPart WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. ?Symptom dp:is_Appear_On ?PlantPart. FILTER(?Problem = dp:Graphiola_Leaf_Spot_Disease) }` | **Affected Plant Parts:**<br>1. Leaf rachis<br>2. Old leaves<br>3. Leaflet |
+| Others | **CQ9:** What are the possible affected plant parts by Red palm weevil damage? | `SELECT DISTINCT ?Problem ?PlantPart WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. ?Symptom dp:is_Appear_On ?PlantPart. FILTER(?Problem = dp:Red_Palm_Weevil_Damage) }` | **Affected Plant Parts:**<br>1. Leaves<br>2. Palm trunk<br>3. Leaf bases<br>4. Fruit bunch<br>5. Outer leaves<br>6. Offshoots |
+| Others | **CQ10:** What are the possible affected plant parts by Longhorn date palm stem borer damage? | `SELECT DISTINCT ?Problem ?PlantPart WHERE { ?Problem dp:influence dp:Date_Palm; dp:has_Symptom ?Symptom. ?Symptom dp:is_Appear_On ?PlantPart. FILTER(?Problem = dp:Longhorn_Date_Palm_Stem_Borer_Damage) }` | **Affected Plant Parts:**<br>1. Leaf bases<br>2. Palm trunk |
 
 ---
 
-# Citation
+# 6. Enhanced Reasoning Competency Questions
 
-If you use PDP-O or these competency questions, please cite the related ontology paper or repository.
-```
+**Source file:** `final_20_cqs.csv`
+
+| Category | CQ | SPARQL Query | Answer by PDP-O |
+| --- | --- | --- | --- |
+| Subsumption | **CQ1:** List all disease individuals inferred as infectious plant diseases through the class hierarchy or equivalent-class axioms. | `SELECT DISTINCT ?disease WHERE { ?disease rdf:type/rdfs:subClassOf* :Infectious_Plant_Disease . } ORDER BY ?disease` | **Infectious Plant Diseases:**<br>1. Bayoud_Disease<br>2. Fusarium_Wilt_Disease<br>3. Inflorescence_Rot_Disease<br>4. Black_Scorch_Disease<br>5. Diplodia_Leaf_Base_Disease<br>6. Graphiola_Leaf_Spot_Disease<br>7. Ganoderma_Butt_Rot_Disease<br>8. Anthracnose_Disease_Of_Date_Palm<br>9. Reddish_Brown_Parallel_Spot_Disease<br>10. Pestalotia_Leaf_Spot_Disease<br>11. Shole_Hole_Disease_Of_Date_Palm<br>12. Rectangular_Pale_Brown_Spot_Disease<br>13. Brown_Leaf_Spot_Disease<br>14. Rachis_Blight_Of_Date_Palm<br>15. Root_Rot_Of_Date_Palm<br>16. Fruit_Rot_Disease_Of_Date_Palm<br>17. Al-Wijam_Disease<br>18. Brittle_Leaves_Disease<br>19. Lethal_Yellowing_Disease |
+| Subsumption | **CQ2:** Which diseases are inferred as fungal diseases through their fungal causal agents? | `SELECT DISTINCT ?disease WHERE { { ?disease rdf:type/rdfs:subClassOf* :Plant_Fungi_Disease . } UNION { ?disease (:is_Caused_By\|^:causes) ?agent . ?agent rdf:type/rdfs:subClassOf* :Fungi . } }` | **Diseases caused by fungi:**<br>1. Bayoud_Disease<br>2. Fusarium_Wilt_Disease<br>3. Inflorescence_Rot_Disease<br>4. Black_Scorch_Disease<br>5. Diplodia_Leaf-Base_Disease<br>6. Graphiola_Leaf_Spot_Disease<br>7. Ganoderma_Butt_Rot_Disease<br>8. Anthracnose_Disease_Of_Date_Palm<br>9. Reddish_Brown_Parallel_Spot_Disease<br>10. Pestalotia_Leaf_Spot_Disease<br>11. Shole_Hole_Disease_Of_Date_Palm<br>12. Rectangular_Pale_Brown_Spot_Disease<br>13. Brown_Leaf_Spot_Disease<br>14. Rachis_Blight_Of_Date_Palm<br>15. Root_Rot_Of_Date_Palm<br>16. Fruit_Rot_Disease_Of_Date_Palm |
+| Subsumption | **CQ3:** Which diseases are inferred as non-infectious diseases through the disease taxonomy? | `SELECT DISTINCT ?disease WHERE { ?disease rdf:type/rdfs:subClassOf* ppo:Noninfectious_Plant_Disease . }` | **Non-infectious Diseases:**<br>1. Frost_Damage<br>2. Hail_Damage<br>3. Heat_Damage<br>4. Water_Stress<br>5. Wind_Damage<br>6. Quick_Wilting_Of_Date_Palm<br>7. Physiological_Yellowing_Of_Date_Palm_Leaf |
+| Subsumption | **CQ4:** Which date palm diseases are inferred as pathogen-caused diseases? | `SELECT DISTINCT ?disease WHERE { ?disease rdf:type/rdfs:subClassOf* :Infectious_Plant_Disease . { ?disease (:is_Disease_Of\|^:has_Disease) :Date_Palm . } UNION { ?disease rdf:type/rdfs:subClassOf* :Fungi_Disease_Of_Date_Palm . } }` | **Date Palm Diseases:**<br>Bayoud_Disease, Fusarium_Wilt_Disease, Inflorescence_Rot_Disease, Black_Scorch_Disease, Diplodia_Leaf_Base_Disease, Graphiola_Leaf_Spot_Disease, Ganoderma_Butt_Rot_Disease, Anthracnose_Disease_Of_Date_Palm, Reddish_Brown_Parallel_Spot_Disease, Pestalotia_Leaf_Spot_Disease, Shole_Hole_Disease_Of_Date_Palm, Rectangular_Pale_Brown_Spot_Disease, Brown_Leaf_Spot_Disease, Rachis_Blight_Of_Date_Palm, Root_Rot_Of_Date_Palm, Fruit_Rot_Disease_Of_Date_Palm, Al-Wijam_Disease, Brittle_Leaves_Disease, Lethal_Yellowing_Disease |
+| Property hierarchy | **CQ5:** Which symptoms appear on the leaf rachis when querying through the parent property `is_Appear_On`, including its subproperties? | `SELECT DISTINCT ?symptom ?property WHERE { ?property rdfs:subPropertyOf* :is_Appear_On . ?symptom ?property :Leaf_Rachis . }` | **Symptoms on Leaf Rachis:**<br>1. Dark_Brown_Stripe_On_Leaf_Rachis<br>2. Yellowish_Brown_Stripe_On_Leaf_Base_And_Leaf_Rachis<br>3. Subepidermal_Spots_On_Both_sides_Of_Leaflet_and_Rachis<br>4. Dark_Gray_Spot_With_Reddish_To_Brown_Edges<br>5. Light_Brown_Spot_With_Dark_Brown_Edges_On_Leaflet<br>6. Small_Yellow_Or_Brown_Circular_Spot_On_Leaflet_And_Leaf_Rachis<br>7. Sticky_Material_At_Entrance_Holes_On_Leaf_Rachis<br>8. Tunnels_At_Leaf_Rachis |
+| Property hierarchy | **CQ6:** List all recommended controls for Fusarium wilt when querying through `has_Recommended_Control`. | `SELECT DISTINCT ?control ?property WHERE { ?property rdfs:subPropertyOf* :has_Recommended_Control . :Fusarium_Wilt_Disease ?property ?control . }` | **Fusarium Wilt Controls:**<br>1. Sodium_Hypochlorite<br>2. Agricultural_Quarantine<br>3. Avoid_excessive_Irrigation<br>4. Stop_Planting_In_The_Same_Site<br>5. Stop_Planting_Of_Hijazi_Alfalfa<br>6. Uprooted_And_Burned_Of_Infected_Palms_On_The_Spot<br>7. Use_Of_Thermal_Sterilization<br>8. Methyl_Bromide |
+| Property hierarchy | **CQ7:** Which pest damages have recommended chemical controls when specific chemical-control subproperties are generalized under `has_Recommended_Control`? | `SELECT DISTINCT ?damage ?control ?property WHERE { ?damage rdf:type/rdfs:subClassOf* :Pest_Damage . ?property rdfs:subPropertyOf* :has_Recommended_Control . ?damage ?property ?control . ?control rdf:type/rdfs:subClassOf* :Chemical_Control . }` | **Pest with Chemical Control:**<br>1. Red_Palm_Weevil |
+| Property hierarchy | **CQ8:** Which symptoms are retrieved through `is_Appear_On` when their location is represented by one of its subproperties? | `SELECT DISTINCT ?symptom ?part ?property WHERE { ?property rdfs:subPropertyOf* :is_Appear_On . ?symptom ?property ?part . { ?part :is_Part_Of* :Leaf . } UNION { :Leaf :has_Part* ?part . } } ORDER BY ?symptom ?part` | **Symptoms on any leaf part:**<br>1. Leaf_Become_Yellow<br>2. Wilting_On_One_Side_Of_Leaf<br>3. Leaf_Become_Ash_Grey<br>4. Death_Of_Leaflet_From_the_Tip_Backwards<br>5. Leaf_Become_Yellow_White_On_One_Side<br>6. etc. |
+| Inverse properties | **CQ9:** Which disease or pest damage is indicated by Wilting on one side of leaf? | `SELECT DISTINCT ?problem WHERE { { :Wilting_On_One_Side_Of_Leaf :indicates ?problem . } UNION { ?problem :has_Symptom :Wilting_On_One_Side_Of_Leaf . } }` | **Problem:**<br>1. Bayoud_Disease<br>2. Fusarium_Wilt_Disease |
+| Inverse properties | **CQ10:** What causal agents are indicated by White powdery covering on inflorescence? | `SELECT DISTINCT ?agent WHERE { { :Inflorescences_Covered_With_White_Powdery :is_Effect_Of ?agent . } UNION { ?agent :has_Effect :Inflorescences_Covered_With_White_Powdery . } }` | **Causal Agent:**<br>1. Mauginiella_Scattae |
+| Inverse properties | **CQ11:** Retrieve all symptoms that indicate a fungal disease. | `SELECT DISTINCT ?symptom ?disease WHERE { ?disease rdf:type/rdfs:subClassOf* :Plant_Fungi_Disease . { ?symptom :indicates ?disease . } UNION { ?disease :has_Symptom ?symptom . } } ORDER BY ?disease ?symptom` | **Symptoms:**<br>1. Dark_Brown_Stripe_On_Leaf_Rachis<br>2. Inflorescences_Covered_With_White_Powdery<br>3. Leaf_With_Scorched_Or_Charcoal_Like_Appearance<br>4. Brown_Or_Rusty_Spots<br>5. etc. |
+| Transitive properties | **CQ12:** Which plant parts are part of the leaf directly or indirectly through `is_Part_Of`? | `SELECT DISTINCT ?part WHERE { { ?part :is_Part_Of+ :Leaf . } UNION { :Leaf :has_Part+ ?part . } }` | **Parts of Leaf:**<br>1. Leaf_Blade<br>2. Petiole<br>3. Leaf_Sheath<br>4. Leaf_Base<br>5. Leaf_Rachis<br>6. Leaflet<br>7. Leaf_Spine<br>8. Leaflet_Margin<br>9. Centre_Leaves |
+| Transitive properties | **CQ13:** For a symptom appearing on the leaflet, which higher-level plant parts are retrieved through `is_Part_Of`? | `SELECT DISTINCT ?symptom ?higherPart WHERE { ?property rdfs:subPropertyOf* :is_Appear_On . ?symptom ?property :Leaflet . :Leaflet :is_Part_Of+ ?higherPart . } ORDER BY ?symptom ?higherPart` | **Higher-level Plant Parts:**<br>1. Leaf_Blade<br>2. Leaf |
+| Transitive properties | **CQ14:** Which symptoms are associated with plant parts that are transitively part of the leaf? | `SELECT DISTINCT ?symptom ?part WHERE { ?property rdfs:subPropertyOf* :is_Appear_On . ?symptom ?property ?part . ?part :is_Part_Of* :Leaf . } ORDER BY ?symptom ?part` | **Symptoms:**<br>1. Wilting_On_One_Side_Of_Leaf<br>2. Leaf_Become_Yellow<br>3. Brown_Spot_With_Light_Center_And_Dark_Edge_Surrounded_By_Yellow_Halo_On_Leaflet<br>4. Death_Of_Leaflet_From_the_Tip_Backwards<br>5. etc. |
+| SWRL Rule 17 | **CQ15:** Find all symptoms of Inflorescence rot disease inferred via Rule 17. | `SELECT DISTINCT ?symptom ?agent WHERE { :Inflorescence_Rot_Disease rdf:type/rdfs:subClassOf* :Plant_Disease . :Inflorescence_Rot_Disease (:is_Caused_By\|^:causes) ?agent . { ?symptom :is_Effect_Of ?agent . } UNION { ?agent :has_Effect ?symptom . } } ORDER BY ?symptom` | **Symptoms:**<br>1. Brown_Or_Rusty_Spots<br>2. Inflorescences_Covered_With_White_Powdery<br>3. Partial_Or_Complete_Destruction_Of_Flowers_And_Spikelets<br>4. Rot_Of_Flowers_And_Spikelets<br>5. Drying_Of_Inflorescence<br>6. Rot_Of_Young_Green_Fruit |
+| SWRL Rule 17 | **CQ16:** Which diseases have a symptom that is an effect of their causal agent? | `SELECT DISTINCT ?disease ?agent ?symptom WHERE { ?disease rdf:type/rdfs:subClassOf* :Plant_Disease . ?disease (:is_Caused_By\|^:causes) ?agent . { ?symptom :is_Effect_Of ?agent . } UNION { ?agent :has_Effect ?symptom . } } ORDER BY ?disease ?symptom` | **Diseases:**<br>1. Bayoud_Disease<br>2. Fusarium_Wilt_Disease<br>3. Inflorescence_Rot_Disease<br>4. Black_Scorch_Disease<br>5. etc. |
+| SWRL Rule 18 | **CQ17:** List pest damages that have symptoms inferred via Rule 18. | `SELECT DISTINCT ?damage ?agent ?symptom WHERE { ?damage rdf:type/rdfs:subClassOf* :Pest_Damage . ?damage (:is_Caused_By\|^:causes) ?agent . { ?symptom :is_Effect_Of ?agent . } UNION { ?agent :has_Effect ?symptom . } } ORDER BY ?damage ?symptom` | **Pest Damage:**<br>1. Red_Palm_Weevil_Damage |
+| SWRL Rule 18 | **CQ18:** What causal agent produces Oozing of brownish fluid for Red palm weevil damage? | `SELECT DISTINCT ?agent ?symptom WHERE { VALUES ?symptom { :Oozing_Of_Brownish_Fluid_With_Typical_Fermented_Odor :Oozing_Of_Brownish_Fluid_Devoid_Of_Any_Fermented_Odor } :Red_Palm_Weevil (:is_Caused_By\|^:causes) ?agent . { ?symptom :is_Effect_Of ?agent . } UNION { ?agent :has_Effect ?symptom . } } ORDER BY ?agent ?symptom` | **Causal Agent:**<br>1. Rhynchophorus_Ferrugineus |
+| SWRL Rules | **CQ19:** What are the asserted and SWRL-inferred symptoms for Black scorch disease? | `SELECT DISTINCT ?symptom ?source WHERE { { :Black_Scorch_Disease :has_Symptom ?symptom . BIND("asserted-or-materialized has_Symptom" AS ?source) } UNION { :Black_Scorch_Disease rdf:type/rdfs:subClassOf* :Plant_Disease . :Black_Scorch_Disease (:is_Caused_By\|^:causes) ?agent . { ?symptom :is_Effect_Of ?agent . } UNION { ?agent :has_Effect ?symptom . } BIND("SWRL Rule 17 candidate" AS ?source) } } ORDER BY ?source ?symptom` | **Symptoms:**<br>1. Black_Rot_On_Inflorescence<br>2. Dark_Brown_Or_Black_Hard_Lesions_On_Leaf<br>3. Death_Of_Leaflet_From_the_Tip_Backwards<br>4. Diminishes_Growth_Of_New_Leaf<br>5. Inflorescence_Blight<br>6. Leaf_With_Scorched_Or_Charcoal_Like_Appearance<br>7. Malformation_And_Twisting_Of_Leaf<br>8. Root_Rot<br>9. Round_To_Oblong_Dark_Brown_Spots<br>10. Terminal_Bud_Rot_And_Blackening<br>11. Trunk_Rot |
+| SWRL Rules | **CQ20:** Which different problems share the same inferred symptom? | `SELECT DISTINCT ?p1 ?p2 ?symptom WHERE { ?p1 (:is_Caused_By\|^:causes) ?agent1 . ?p2 (:is_Caused_By\|^:causes) ?agent2 . FILTER(?p1 != ?p2) { ?p1 rdf:type/rdfs:subClassOf* :Plant_Disease . } UNION { ?p1 rdf:type/rdfs:subClassOf* :Pest_Damage . } { ?p2 rdf:type/rdfs:subClassOf* :Plant_Disease . } UNION { ?p2 rdf:type/rdfs:subClassOf* :Pest_Damage . } { ?symptom :is_Effect_Of ?agent1 . } UNION { ?agent1 :has_Effect ?symptom . } { ?symptom :is_Effect_Of ?agent2 . } UNION { ?agent2 :has_Effect ?symptom . } FILTER(STR(?p1) < STR(?p2)) } ORDER BY ?symptom ?p1 ?p2` | **Shared Inferred Symptoms:**<br>1. Bayoud_Disease and Fusarium_Wilt_Disease share Wilting_On_One_Side_Of_Leaf<br>2. Bayoud_Disease and Reddish_Brown_Parallel_Spot_Disease share Dark_Brown_Stripe_On_Leaf_Rachis<br>3. Date_Palm_Dubas_Bug and Mealy_Bugs share Black_Sooty_Rot |
+
+---
+
+## Notes
+
+- Prefixes such as `dp:`, `rdf:`, `rdfs:`, `owl:`, `ppo:`, and `:` should be defined according to the PDP-O ontology namespace.
+- Long SPARQL queries are written inline using backticks to keep the README table non-collapsible.
+- For improved readability in GitHub, line breaks inside table cells are written using `<br>`.
