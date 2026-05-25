@@ -1,7 +1,7 @@
 # PDP-O: Plant Disease and Pest Ontology
 
 [![Ontology](https://img.shields.io/badge/Ontology-OWL-blue)](ontology/PDP-O.owl)
-[![SPARQL](https://img.shields.io/badge/SPARQL-Queries-green)](sparql/)
+[![SPARQL](https://img.shields.io/badge/SPARQL-Queries-green)](sparql_queries/)
 [![Evaluation](https://img.shields.io/badge/Evaluation-CQs-orange)](evaluation/)
 [![Status](https://img.shields.io/badge/Status-Research%20Prototype-lightgrey)]()
 
