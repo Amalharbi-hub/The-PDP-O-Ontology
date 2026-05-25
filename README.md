@@ -37,3 +37,5 @@ The-PDP-O-Ontology/
 ├── evaluation/               # Expert-validation protocol and results
 ├── workshops/                # CQ-development workshop summaries
 └── figures/                   # Diagrams and workflow figures
+└── documentation/            # Additional ontology documentation
+
