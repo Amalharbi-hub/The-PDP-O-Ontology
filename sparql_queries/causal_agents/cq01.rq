@@ -1,0 +1,5 @@
+SELECT DISTINCT  ?Problem  ?Causal_Agent_Scientific_name
+WHERE {?Problem dp:influence dp:Date_Palm;
+                                 dp:is_Caused_By  ?Causal_Agent .
+              ?Causal_Agent  dp:has_Scientific_name    ?Causal_Agent_Scientific_name .
+                                 FILTER(?Problem = dp:Inflorescence_Rot_Disease)}
