@@ -1,0 +1,4 @@
+SELECT DISTINCT   ?Pest  ?Outbreak_Time
+WHERE {?Pest dp:is_Pest_Of  dp:Date_Palm;
+              dp:has_Time ?Outbreak_Time.
+              FILTER(?Pest = dp:Rhynchophorus_Ferrugineus)}
