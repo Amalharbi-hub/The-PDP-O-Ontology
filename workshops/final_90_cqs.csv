@@ -1,0 +1,165 @@
+Category,CQs
+Disease/ Pest,"CQ1: What are the following symptoms indicate?
+Ejection of chewed up fibers from wounds on palm trunk.
+Palm leaves and offshoot become yellow."
+,"CQ2: What are the following symptoms indicate?
+Cylindrical oblique holes appear on the palm trunk and leaf base.
+Brown sticky material at holes on palm trunk."
+,"CQ3: What is the following symptom indicate?
+Dark brown stripe appears on the dorsal side of rachis from the base to the top."
+,"CQ4: What are the following symptom indicate?
+Brown or rusty spots appear on the external surface of unopening inflorescence.
+Inflorescences covered with white powdery."
+,"CQ5: What are the following symptom indicate?
+Longitudinal tunnels and holes on fruit bunch.
+Spikelets tips become light gray to silver.
+Holes on unopened spathe."
+,"CQ6: What are the following symptom indicate?
+Leaflet becomes light green or yellowish green.
+Oozing of honeydew on leaflet."
+,"CQ7: What are the following symptom indicate?
+A yellowish-brown stripe on leaf base and leaf rachis.
+Leaf base rot.
+Death of offshoot."
+,"CQ8: What are the following symptom indicate?
+Deformation of Leaves
+Brown spots with a light center and dark edge surrounded by a yellow halo on the leaflet.
+"
+,"CQ9: What are the following symptom indicate?
+Pale spots surrounded by a brown ring on leaflet.
+Circular or irregular scorched shot holes on the leaf edge."
+,"CQ10: What are the following symptom indicate?
+Sticky material at entrance holes on leaf rachis.
+Tunnels at leaf rachis.
+Leaf becomes powdery."
+,"CQ11: What are the following symptom indicate?
+Death of leaflet from the tip backwards.
+Malformation and twisting of leaf.
+Leaf with a scorched or charcoal-like appearance."
+,"CQ12: What are the following symptom indicate?
+Subepidermal spots on both sides of the leaflet and rachis.
+Yellow pustules that turn black on lower old leaf.
+Drying of leaf."
+,"CQ13: What are the following symptom indicate?
+Leaflet tip and edges become burnt grey.
+Small yellow or brown circular spots on leaflet and leaf rachis.
+
+"
+,"CQ14: What are the following symptom indicate?
+Small holes like shotgun bullets on trunk and leaf base.
+Ejection of wooden sawdust from holes at leaf base or trunk.
+"
+,"CQ15: What are the following symptom indicate?
+Small and dried fruit hanging by silken threads.
+Dropped fruit with holes and silky remain close to fruit cap.
+Fruit becomes dark red."
+,"CQ16: What are the following symptom indicate?
+Deep tunnels on fruit stalk.
+Superficial and deep tunnels on green leaves.
+Malformation and twisting of offshoot leaves."
+,"CQ17: What are the following symptom indicate?
+Wilting on one side of leaf.
+Dark brown stripe on leaf rachis."
+,"CQ18: What are the following symptom indicate?
+Small parallel reddish-brown spots on leaf.
+Dark brown stripe appears on the dorsal side of rachis."
+,"CQ19: What are the following symptom indicate?
+Small holes below of inflorescence spathe.
+Inflorescences become devoid of flowers and fruits."
+,"CQ20: What are the following symptom indicate?
+Oozing of honeydew on leaflet.
+Deformation and curl of fruit.
+"
+,"CQ21: What are the following symptom indicate?
+Fruit stalk, leaf rachis, and leaflet become light green with brown spots.
+Deformation and curl of fruit."
+,"CQ22: What are the following symptom indicate?
+Vertical tunnels at the root zone and offshoots base.
+Soil tunnels on leaf base.
+Death of newly planted offshoots."
+,"CQ23: What are the following symptom indicate?
+Silken webbings around fruits and spikelets that collect dust.
+Fruit skin becomes leathery with a cork texture.
+Fruits become reddish brown."
+,"CQ24: What are the following symptom indicate?
+Light brown spots with dark brown edges on the leaflet and leaf rachis.
+Dark gray spots with reddish-to-brown edges on both surfaces of the leaflet.
+"
+,"CQ25: What is the following symptom indicate?
+Black sooty rot appears on the leaflet.
+"
+Control Method,CQ1: What is the suitable chemical control of (Red palm weevil)?
+,CQ2: What is the suitable chemical control of (Black scorch disease of date palm)
+,"CQ3: What is the suitable biological control of a (Palm frond borer damage)?
+"
+,"CQ4: What is the suitable biological control of (Red palm weevil)?
+
+"
+,CQ5: What is the suitable chemical control of (Inflorescence rot disease)
+,CQ6: What is the suitable cultural control of (Fusarium wilt disease)
+,CQ7: What is the suitable biological control of (Fruit Stalk Borer Damage)
+,"CQ8: What is the suitable chemical control of
+(Bayoud disease)"
+,"CQ9: What is the suitable cultural control of
+(Black scorch disease of date palm)"
+,"CQ10: What is the suitable chemical control of
+(Diplodia Leaf-Base disease)"
+,CQ11: What is the application rate of “Bavistin” to control (Inflorescence rot disease)?
+,CQ12: What is the application rate of “Mancozeb” to control (Back Scorch disease)?
+,CQ13: What is the application rate  and method of “Cypermethrin” to control (Rhynchophorus Ferrugineus)?
+,"CQ14: How to apply ""Sodium hypochlorite"" to control (Fusarium wilt disease)?"
+,"CQ15: For which disease or pest ""Methyl Bromide"" used?"
+,"CQ16: What is ""Metalaxyl-M"" and for which disease or pest  used?"
+,"CQ17: What is the suitable chemical control of
+(Graphiola leaf spot disease)?"
+,"CQ18: What is the suitable cultural control of
+(Graphiola leaf spot disease)?"
+,CQ19: What is the suitable biological control of a (Longhorn date palm stem borer damage)?
+,CQ20: What is the application rate  and method of “Methidathion” to control (Rhynchophorus Ferrugineus)?
+Symptom,CQ1: What are the possible symptoms associated with (Fusarium wilt disease)?
+,CQ2: What are the possible symptoms associated with (Red palm weevil damage)?
+,CQ3: What are the possible symptoms associated with (Inflorescence rot disease)?
+,CQ4: What are the possible symptoms associated with (Back Scorch disease)?
+,CQ5: What are the possible symptoms associated with (Graphiola leaf spot disease)?
+,CQ6: What are the most common general symptoms of plant disease or pest damage?
+,"CQ7: What is the “Die_Back” symptom means?
+"
+,"CQ8: What is the “Blight” symptom means?
+"
+,CQ9: What is the “Discolouration” symptom means?
+,CQ10: What is the “Scorch” symptom means?
+,"CQ11: What are the distinct characteristics of ""Wilting"" symptom?"
+,"CQ12: What are the distinct characteristics of "" Scorch"" symptom?"
+,"CQ13: What are the distinct characteristics of "" Shot_Hole"" symptom?"
+,"CQ14: What are the distinct characteristics of ""Gummosis” symptom?"
+,"CQ15: What are the distinct characteristics of "" Blight” symptom?"
+Causal Agent,CQ1: What is the scientific name of major agents of (Inflorescence rot disease)?
+,CQ2: What is the scientific name of major agents of (Black scorch disease)?
+,CQ3: What is the scientific name of major agents of (Ganoderma butt rot disease)?
+,CQ4: What is the scientific name of major agents of (Anthracnose disease of date palm)?
+,CQ5: What is the scientific name of major agents of (Diplodia leaf-base disease)?
+,CQ6: What is the scientific name of major agents of (Fusarium wilt disease)?
+,CQ7: What is the scientific name of major agents of (Reddish brown parallel spot disease)?
+,CQ8: What is the scientific name of major agents of (Date palm Dubas bug damage)?
+,CQ9: What is the scientific name of major agents of (Lesser date moth damage)?
+,CQ10: What is the scientific name of major agents of (Palm frond borer damage)?
+,CQ11: What is the scientific name of major agents of (Longhorn date palm stem borer damage)?
+,CQ12: What is the scientific name of major agents of (Mealy bugs damage)?
+,CQ13: What are the most common type of biotic factors that contribute to the emergence of a plant disease/damage?
+,CQ14: What are the environmental factors that contribute to the emergence of (Inflorescence rot disease)?
+,CQ15: What are the environmental factors that contribute to the emergence of (Black scorch disease)?
+,CQ16: What are the environmental factors that contribute to the emergence of the insect (Rhynchophorus Ferrugineus)?
+,CQ17: What are the agricultural practices that contribute to the emergence of (Fusarium wilt disease)?
+,CQ18: What are the agricultural practices that contribute to the emergence of the insect (Red palm weevil damage)?
+,"CQ19: What is the transmission mode of ""Fusarium Oxysporum Schlecht"" fungi that cause fusarium wilt disease?"
+,"CQ20: What is the transmission mode of the insect ""Rhynchophorus_Ferrugineus"" ?"
+Others,"CQ1: What is the active time of the insect ""Rhynchophorus_Ferrugineus"" ?"
+,CQ2: What is the expected outbreak time of (Inflorescence rot disease)?
+,CQ3: What varieties or cultivars are most susceptible to (Black scorch disease)?
+,CQ4: What varieties or cultivars are most susceptible to (Fusarium wilt disease)?
+,CQ5: What varieties or cultivars are most susceptible to (Inflorescence rot disease)?
+,CQ6: What varieties or cultivars are most susceptible to (Graphiola leaf spot disease)?
+,CQ7: What are the possible affected plant parts by (Graphiola leaf spot disease)?
+,CQ8: What are the possible affected plant parts by (Inflorescence rot disease)?
+,CQ9: What are the possible affected plant parts by (Red palm weevil damage)?
+,CQ10: What are the possible affected plant parts by (Longhorn date palm stem borer damage)?
