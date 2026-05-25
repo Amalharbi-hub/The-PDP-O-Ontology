@@ -1,0 +1,4 @@
+SELECT DISTINCT  ?Problem  ?Sname
+WHERE { ?Problem dp:influence dp:Date_Palm.
+   ?Problem  dp:has_Symptom   dp:Cylindrical_Oblique_Holes_On_Trunk_And_Leaf_Base; dp:has_Symptom dp:Brown_Sticky_Material_At_Holes_On_Trunk;
+dp:is_Caused_By ?Agent.  ?Agent  dp:has_Scientific_name ?Sname}
