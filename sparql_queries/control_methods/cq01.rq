@@ -1,0 +1,4 @@
+SELECT DISTINCT  ?SName ?Chemical_Control
+WHERE {  ?Pest dp:is_Parasite_Of dp:Date_Palm.
+            {?Pest dp:has_Common_Name  ?SName. FILTER (regex(str(?SName),"Red palm weevil","i")) }
+                 ?Pest dp:has_Chemical_Control  ?Chemical_Control}
