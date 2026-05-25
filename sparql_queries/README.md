@@ -6,34 +6,14 @@ The queries correspond to the competency questions (CQs) used in the PDP-O evalu
 
 ---
 
-## Folder Structure
+## SPARQL Queries
 
-Recommended structure:
+The SPARQL queries used for PDP-O competency question evaluation are available in the [`sparql_queries/`](./sparql_queries/) folder.
 
-```text
-sparql_queries/
-├── README.md
-├── disease_pest/
-│   ├── cq01.rq
-│   ├── cq02.rq
-│   └── ...
-├── control_methods/
-│   ├── cq01.rq
-│   ├── cq02.rq
-│   └── ...
-├── symptoms/
-│   ├── cq01.rq
-│   ├── cq02.rq
-│   └── ...
-├── causal_agents/
-│   ├── cq01.rq
-│   ├── cq02.rq
-│   └── ...
-├── others/
-│   ├── cq01.rq
-│   ├── cq02.rq
-│   └── ...
-└── enhanced_reasoning/
-    ├── cq01.rq
-    ├── cq02.rq
-    └── ...
+The folder includes categorized `.rq` query files for:
+
+- Disease / Pest CQs
+- Control Method CQs
+- Symptom CQs
+- Causal Agent CQs
+- Other CQs
